@@ -56,9 +56,9 @@ The **AI Hardware Design League (AI-HDL)** is an innovative educational competit
 | Date                        | Event                                                                              |
 | --------------------------- | ---------------------------------------------------------------------------------- |
 | **September 22 2025** | Registration Opens                                                                 |
-| **October 30  2025**  | Webinar 1: Overview of AI-HDL, Design Challenge, Tool Flow, Timeline, Rubric, and Submissions                                                   |
-| **November 20 2025**  | Webinar 2: Design Challenge Announcement and Overview                                                   |
-| **December 18 2025**  | Webinar 3: Base Design Implementation Demo and Q&A                                                   |
+| **October 30  2025**  | Webinar 1: Overview of AI-HDL, Design Challenge, Tool Flow, Timeline, Rubric, and Submissions   |
+| **November 20 2025**  | Webinar 2: Design Challenge Announcement and Overview                                           |
+| **December 18 2025**  | Webinar 3: Base Design Implementation Demo and Q&A                                              |
 | **November 30 2025**  | Registration Closes                                                                |
 | **January 15 2026**   | League Starts with Design Phase #1 Base Design Expansion |
 | **January 29 2026**   | Milestone Review and Office Hours #1                                               |
@@ -66,7 +66,7 @@ The **AI Hardware Design League (AI-HDL)** is an innovative educational competit
 | **February 26 2026**  | Milestone Review and Office Hours #2                                               |
 | **March 12 2026**     | Design Phase #3 Security Evaluation and Threat Mitigation                      |
 | **March 26 2026**     | Milestone Review and Office Hours #3                                               |
-| **April 9 2026**      | Design Phase #4: Design Netlist to Chip Tapeout                        |
+| **April 9 2026**      | Design Phase #4 Design Netlist to Chip Tapeout                        |
 | **April 23 2026**     | Milestone Review and Office Hours #4                                               |
 | **May 7 2026**        | League Ends with Final Design Submission, Review, and Evaluations.                              |
 | **May 14 2026**       | Winner Announcement.                                                                |
