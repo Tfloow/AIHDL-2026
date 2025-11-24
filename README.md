@@ -265,7 +265,7 @@ See our [Getting Started Guide](./docs/getting-started/README.md) for detailed i
 
 </div>
 
-### **Academic Partners**
+### **Academic Institutions of Our Participants**
 
 University of Arizona • University of New South Wales • Hanoi University of Science and Technology • VNU University of Engineering and Technology • Digital University of Kerala • University of Heidelberg
 
