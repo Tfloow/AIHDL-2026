@@ -1,5 +1,7 @@
 # AI-HDL Repository .gitignore
 
+synth_netlist.v
+
 # Compiled Verilog files
 *.vvp
 *.vcd

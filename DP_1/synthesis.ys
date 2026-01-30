@@ -1,0 +1,78 @@
+# ---------------------------------------------------------
+# Yosys Synthesis Script for DP_1
+# ---------------------------------------------------------
+
+# 1. Read SystemVerilog/Verilog sources
+#    (Using -sv flag to support SystemVerilog features if present)
+
+# --- Top Level & Peripherals ---
+read_verilog -sv tt_wrapper.v
+read_verilog -sv peripheral.v
+
+# --- Read Test test_harness---
+read_verilog -sv test_harness/falling_edge_detector.sv
+read_verilog -sv test_harness/reclocking.sv
+read_verilog -sv test_harness/rising_edge_detector.sv
+read_verilog -sv test_harness/spi_reg.sv
+read_verilog -sv test_harness/synchronizer.sv
+
+# --- CPU Core Components ---
+# reading all modules inside the cpu/ folder
+read_verilog -sv cpu/alu.v
+read_verilog -sv cpu/core.v
+read_verilog -sv cpu/counter.v
+read_verilog -sv cpu/cpu.v
+read_verilog -sv cpu/decode.v
+read_verilog -sv cpu/latch_reg.v
+read_verilog -sv cpu/mem_ctrl.v
+read_verilog -sv cpu/qspi_ctrl.v
+read_verilog -sv cpu/qspi_flash.v
+read_verilog -sv cpu/register.v
+read_verilog -sv cpu/time.v
+read_verilog -sv cpu/tinyqv.v
+
+# --- Helpers (Optional) ---
+# Uncomment these if your design uses modules from test_harness in the actual hardware
+# read_verilog -sv test_harness/synchronizer.sv
+# read_verilog -sv test_harness/rising_edge_detector.sv
+
+# 2. Check Hierarchy
+#    Replace 'tt_wrapper' with the actual name of your top module if different.
+#    (e.g., tt_um_example, etc.)
+hierarchy -check -top tt_um_tqv_peripheral_harness
+
+# 3. Process & Optimize
+#    Convert processes (always blocks) to netlist elements
+proc
+
+#    Flatten hierarchy (optional, helpful for area estimation)
+#    flatten
+
+#    Perform basic logic optimization
+opt
+
+#    Map Finite State Machines
+fsm
+
+#    Optimize again after FSM mapping
+opt
+
+#    Map to generic memory cells (flip-flops/RAMs)
+memory
+
+#    Final cleanup optimization
+opt
+
+# 4. Techmap (Generic)
+#    Maps internal Yosys cells to standard logic gates
+techmap
+opt
+
+# 5. Output & Statistics
+#    Write the synthesized netlist to a file
+write_verilog synth_netlist.v
+
+#    Print area statistics (gate count estimate)
+stat -top tt_um_tqv_peripheral_harness
+
+log Synthesis complete! Check synth_netlist.v for the output.
